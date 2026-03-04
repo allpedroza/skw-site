@@ -12,6 +12,17 @@
 - Wyzowl: organização simples por tipo de entrega.
 - Sandwich Video: leitura rápida de cada case.
 
+## Cases aplicados do site atual da SKW
+
+Cases coletados da home atual (`skwvideo.com.br`) e incorporados nesta versão:
+
+- NightRun Rio 24
+- SoulScience Jovens Cientistas
+- Bloco Brasil Carnaval 24
+- ViradaCast por WList
+- Aldeia Tibá · Povo Pataxó
+- Orq Voadora e Diogo Nogueira
+
 ## Próximo passo recomendado
 
 Quando o ambiente de PR aceitar binários, reintroduzir capas reais em formato otimizado (WebP/AVIF) e manter fallback CSS.
