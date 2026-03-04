@@ -58,6 +58,35 @@ function setupMagneticButtons() {
   });
 }
 
+
+function setupPortfolioSpotlight() {
+  const items = [...document.querySelectorAll('.portfolio-item')];
+  if (!items.length) return;
+
+  const activate = (item) => {
+    items.forEach((card) => {
+      const video = card.querySelector('.portfolio-video');
+      const isActive = card === item;
+      card.classList.toggle('is-active', isActive);
+
+      if (!video) return;
+      video.controls = isActive;
+      if (isActive) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  };
+
+  items.forEach((item, index) => {
+    item.addEventListener('mouseenter', () => activate(item));
+    item.addEventListener('focusin', () => activate(item));
+    if (index === 0) activate(item);
+  });
+}
+
 function setupParallax() {
   if (reducedMotion) return;
 
@@ -74,4 +103,5 @@ onScrollHeader();
 window.addEventListener('scroll', onScrollHeader, { passive: true });
 setupReveal();
 setupMagneticButtons();
+setupPortfolioSpotlight();
 setupParallax();
