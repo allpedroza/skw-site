@@ -59,6 +59,61 @@ function setupMagneticButtons() {
 }
 
 
+function setupProcessEvolution() {
+  const steps = [...document.querySelectorAll('.steps .step')];
+  const progressFill = document.querySelector('#process-progress-fill');
+  const stage = document.querySelector('#process-stage');
+  if (!steps.length || !progressFill || !stage) return;
+
+  const stageDetails = {
+    1: {
+      title: 'Imersão estratégica',
+      text: 'Mapeamos cenário, objetivos de negócio e mensagens-chave para construir um projeto orientado a resultado desde o início.'
+    },
+    2: {
+      title: 'Conceito e roteiro',
+      text: 'Transformamos estratégia em direção criativa, com narrativa alinhada ao posicionamento da marca e ao público prioritário.'
+    },
+    3: {
+      title: 'Produção e pós',
+      text: 'Executamos captação e edição com padrão premium, mantendo consistência estética e velocidade de entrega.'
+    },
+    4: {
+      title: 'Distribuição e desdobramentos',
+      text: 'Entregamos versões por canal e objetivo para ampliar alcance, retenção e conversão ao longo da jornada comercial.'
+    }
+  };
+
+  const updateStage = (nextStep) => {
+    const current = Math.min(Math.max(nextStep, 1), steps.length);
+    steps.forEach((step, index) => {
+      const isActive = index + 1 === current;
+      step.classList.toggle('is-active', isActive);
+      step.setAttribute('aria-selected', String(isActive));
+      step.tabIndex = isActive ? 0 : -1;
+    });
+
+    const percent = (current / steps.length) * 100;
+    progressFill.style.width = `${percent}%`;
+
+    const content = stageDetails[current];
+    stage.innerHTML = `<h3>${content.title}</h3><p>${content.text}</p>`;
+  };
+
+  steps.forEach((step, index) => {
+    const target = index + 1;
+    step.addEventListener('click', () => updateStage(target));
+    step.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        updateStage(target);
+      }
+    });
+  });
+
+  updateStage(1);
+}
+
 function setupPortfolioSpotlight() {
   const items = [...document.querySelectorAll('.portfolio-item')];
   if (!items.length) return;
@@ -103,5 +158,6 @@ onScrollHeader();
 window.addEventListener('scroll', onScrollHeader, { passive: true });
 setupReveal();
 setupMagneticButtons();
+setupProcessEvolution();
 setupPortfolioSpotlight();
 setupParallax();

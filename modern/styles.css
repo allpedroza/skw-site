@@ -111,6 +111,23 @@ main h3 {
 .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+.process-evolution { display: grid; gap: 1rem; }
+.process-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #1d1d1d;
+  overflow: hidden;
+  border: 1px solid #2b2b2b;
+}
+.process-progress-fill {
+  display: block;
+  height: 100%;
+  width: 25%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #a37612, var(--yellow));
+  transition: width .45s ease;
+}
+
 .card,
 .step,
 .portfolio-item {
@@ -120,7 +137,21 @@ main h3 {
 }
 .card,
 .step { padding: 1rem; }
+.step { cursor: pointer; }
 .step span { color: var(--gray); font-weight: 800; letter-spacing: .08em; font-size: .85rem; }
+.step.is-active {
+  border-color: #555;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+}
+
+.process-stage {
+  border: 1px solid #323232;
+  border-radius: 14px;
+  background: #111;
+  padding: 1rem;
+}
+.process-stage h3 { margin: 0 0 .45rem; }
+.process-stage p { margin: 0; }
 
 .portfolio-grid {
   display: flex;
@@ -184,6 +215,32 @@ input {
   color: #fff;
   padding: .72rem;
   font-family: inherit;
+}
+textarea {
+  width: 100%;
+  margin-top: .3rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+  padding: .72rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 30;
+  border-radius: 999px;
+  padding: .78rem 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #0c0c0c;
+  background: #25d366;
+  border: 1px solid #56f195;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
 }
 
 @media (max-width: 980px) {
