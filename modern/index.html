@@ -36,9 +36,11 @@
         "areaServed": "Brasil",
         "email": "contato@skwvideo.com.br",
         "serviceType": [
-          "Vídeo Institucional",
-          "Case e Depoimento",
-          "Cobertura de Eventos",
+          "Vídeos Institucionais",
+          "Cases e Depoimentos",
+          "Aftermovies",
+          "Chamados Real Time",
+          "Podcasts",
           "Vídeos para Campanhas"
         ]
       }
@@ -98,20 +100,28 @@
           <h2 class="display js-animate" data-animate="reveal-right">Serviços</h2>
           <div class="cards">
             <article class="card js-animate" data-animate="fade-up">
-              <h3>Vídeo Institucional</h3>
-              <p>Posicionamento de marca com narrativa clara para fortalecer autoridade.</p>
+              <h3>Vídeos Institucionais</h3>
+              <p>Para posicionar sua marca com clareza, construir autoridade e reduzir ruído na percepção do mercado.</p>
             </article>
             <article class="card js-animate" data-animate="fade-up">
-              <h3>Case & Depoimento</h3>
-              <p>Prova social para acelerar vendas e apoiar decisões comerciais complexas.</p>
+              <h3>Cases & Depoimentos</h3>
+              <p>Para transformar confiança em decisão, com validação real que encurta ciclos de venda B2B.</p>
             </article>
             <article class="card js-animate" data-animate="fade-up">
-              <h3>Cobertura de Eventos</h3>
-              <p>Aftermovie e recortes que estendem o impacto do evento no digital.</p>
+              <h3>Aftermovies</h3>
+              <p>Para manter o evento vivo após o último dia, ampliando alcance, lembrança e valor percebido da marca.</p>
+            </article>
+            <article class="card js-animate" data-animate="fade-up">
+              <h3>Chamados Real Time</h3>
+              <p>Para ganhar timing de publicação e relevância no momento em que a atenção do público está no pico.</p>
             </article>
             <article class="card js-animate" data-animate="fade-up">
               <h3>Vídeos para Campanhas</h3>
-              <p>Peças para awareness, performance e nutrição ao longo do funil B2B.</p>
+              <p>Para sustentar campanhas com criativos orientados a awareness, consideração e conversão ao longo do funil.</p>
+            </article>
+            <article class="card js-animate" data-animate="fade-up">
+              <h3>Podcasts</h3>
+              <p>Para escalar autoridade com conteúdo recorrente, maximizando distribuição e reaproveitamento em múltiplos canais.</p>
             </article>
           </div>
         </div>
@@ -164,11 +174,25 @@
       <section id="processo" class="section">
         <div class="container split-heading">
           <h2 class="display js-animate" data-animate="reveal-right">Processo</h2>
-          <div class="steps">
-            <article class="step js-animate" data-animate="fade-up"><span>01</span><h3>Imersão</h3><p>Leitura de contexto, metas e público prioritário.</p></article>
-            <article class="step js-animate" data-animate="fade-up"><span>02</span><h3>Conceito</h3><p>Estratégia criativa, roteiro e planejamento de produção.</p></article>
-            <article class="step js-animate" data-animate="fade-up"><span>03</span><h3>Produção</h3><p>Captação e pós com direção estética e consistência técnica.</p></article>
-            <article class="step js-animate" data-animate="fade-up"><span>04</span><h3>Distribuição</h3><p>Versões e cortes para múltiplos pontos da jornada comercial.</p></article>
+          <div class="process-evolution js-animate" data-animate="fade-up">
+            <div class="process-progress" aria-hidden="true">
+              <span class="process-progress-fill" id="process-progress-fill"></span>
+            </div>
+            <div class="steps" role="tablist" aria-label="Etapas do processo SKW">
+              <article class="step is-active" role="tab" tabindex="0" aria-selected="true" data-step="1">
+                <span>01</span><h3>Imersão</h3><p>Leitura de contexto, metas e público prioritário.</p>
+              </article>
+              <article class="step" role="tab" tabindex="-1" aria-selected="false" data-step="2">
+                <span>02</span><h3>Conceito</h3><p>Estratégia criativa, roteiro e planejamento de produção.</p>
+              </article>
+              <article class="step" role="tab" tabindex="-1" aria-selected="false" data-step="3">
+                <span>03</span><h3>Produção</h3><p>Captação e pós com direção estética e consistência técnica.</p>
+              </article>
+              <article class="step" role="tab" tabindex="-1" aria-selected="false" data-step="4">
+                <span>04</span><h3>Distribuição</h3><p>Versões e cortes para múltiplos pontos da jornada comercial.</p>
+              </article>
+            </div>
+            <div class="process-stage" id="process-stage" aria-live="polite"></div>
           </div>
         </div>
       </section>
@@ -183,11 +207,21 @@
           <form class="contact-form" onsubmit="return false;">
             <label>Nome<input type="text" required /></label>
             <label>E-mail corporativo<input type="email" required /></label>
+            <label>Detalhamento do projeto<textarea rows="4" placeholder="Conte objetivos, prazo, formato e contexto da demanda."></textarea></label>
             <button class="btn btn-primary" type="submit">Solicitar proposta</button>
           </form>
         </div>
       </section>
     </main>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5521969564094?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20a%20SKW%20pode%20acelerar%20os%20resultados%20do%20meu%20neg%C3%B3cio"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com a SKW no WhatsApp"
+    >
+      WhatsApp
+    </a>
     <script src="app.js" defer></script>
   </body>
 </html>
