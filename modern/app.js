@@ -68,19 +68,19 @@ function setupProcessEvolution() {
   const stageDetails = {
     1: {
       title: 'Imersão estratégica',
-      text: 'Mapeamos cenário, objetivos de negócio e mensagens-chave para construir um projeto orientado a resultado desde o início.'
+      text: 'Mapeamos cenário, objetivos e público para definir o porquê de cada criativo antes da produção começar.'
     },
     2: {
       title: 'Conceito e roteiro',
-      text: 'Transformamos estratégia em direção criativa, com narrativa alinhada ao posicionamento da marca e ao público prioritário.'
+      text: 'Traduzimos a estratégia em conceito e roteiro para que cada peça tenha função clara na jornada comercial.'
     },
     3: {
       title: 'Produção e pós',
-      text: 'Executamos captação e edição com padrão premium, mantendo consistência estética e velocidade de entrega.'
+      text: 'Executamos captação e edição com consistência para garantir qualidade criativa sem perder velocidade de negócio.'
     },
     4: {
       title: 'Distribuição e desdobramentos',
-      text: 'Entregamos versões por canal e objetivo para ampliar alcance, retenção e conversão ao longo da jornada comercial.'
+      text: 'Distribuímos versões por canal e meta para conectar cada formato ao resultado esperado: alcance, retenção e conversão.'
     }
   };
 
